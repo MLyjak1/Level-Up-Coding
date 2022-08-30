@@ -29,6 +29,7 @@ The project uses a combination of a React-based front end for page flow, styling
     * Mongoose
 * Apollo
 * Concurrently
+* Validator
 
 * Various Hardware including multiple different screen sizes and mobile devices
 
