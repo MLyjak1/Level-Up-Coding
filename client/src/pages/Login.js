@@ -90,6 +90,7 @@ const Login = (props) => {
                 </div>
             </article>
         </main>
-    )
+    );
+};
 
-}
+export default Login;
