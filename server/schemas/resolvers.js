@@ -6,10 +6,10 @@ const resolvers = {
     Query: {
         users: async () => {
             // Add in comments model
-            return User.find().populate("comments");
+            return User.find().populate('comments');
         },
         user: async (parent, { username }) => {
-            return User.findOne({ username }).populate("comments");
+            return User.findOne({ username }).populate('comments');
         },
     },
 
@@ -33,7 +33,7 @@ const resolvers = {
 
             // If there is no user with that email address, return Authentication error message
             if (!user) {
-                throw new AuthenticationError("No user is found with this email address!");
+                throw new AuthenticationError('No user is found with this email address!');
             }
 
             // If user is found, check if the password they provided is correct
@@ -41,7 +41,7 @@ const resolvers = {
 
             // If the password is incorrect, return Authentication error m
             if (!correctPassword) {
-                throw new AuthenticationError("Incorrect password.");
+                throw new AuthenticationError('Incorrect password.');
             }
 
             // If the provided email and password are correct, sign user into the app with a JWT
