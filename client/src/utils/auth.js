@@ -13,7 +13,27 @@ class AuthService {
     // (Does not verify if it's expired yet)
     loggedIn() {
         const token = this.getToken();
-        return token ? true : false;
+
+        // If the token exists and has not expired, return true
+        return token && !this.isTokenExpired(token) ? true : false;
+    }
+
+
+    isTokenExpired(token) {
+
+        // Decodes the token to get its expiration time that was set by the server
+        const decoded = decode(token);
+
+        // If the expiration time is less than the current time, the token is expired, so return true
+        // TODO: MAY NEED TO DOUBLE CHECK THIS***********************
+        if (decoded.exp < Date.now() / 1000) {
+            localStorage.removeItem("id_token");
+            return true;
+        } else {
+
+            // If token has not expired, return false
+            return false;
+        }
     }
 
     // Retrieves the user token from localStorage
