@@ -1,72 +1,51 @@
+const { Schema, model } = require("mongoose");
+const bcrypt = require("bcrypt");
 
+// import schema from Comment.js (Uncomment this later)
+// const commentSchema = require("./Comment");
 
+const userSchema = new Schema(
+    {
+        username: {
+            type: String,
+            required: true,
+            unique: true,
+        },
+        email: {
+            type: String,
+            required: true,
+            unique: true,
+            match: [/.+@.+\..+/, "Please use a valid email address!"],
+        },
+        password: {
+            type: String,
+            required: true,
+            minlength: 4,
+        },
+        // Uncomment this later
+        // savedComments: [commentSchema],
+    },
+    {
+        toJSON: {
+            virtuals: true,
+        },
+    }
+);
 
+// Hashes the user's password
+userSchema.pre("save", async function (next) {
+    if (this.isNew || this.isModified("password")) {
+        const saltRounds = 10;
+        this.password = await bcrypt.hash(this.password, saltRounds);
+    }
+    next();
+});
 
+// Checks if the password is correct
+userSchema.methods.isCorrectPassword = async function (password) {
+    return bcrypt.compare(password, this.password)
+};
 
+const User = model("User", userSchema);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// const Validator = require('validator');
-// const { Schema, models } = require('mongoose');
-
-// const userSchema = new Schema({
-// id: {type: Number, required: true, unique: true, increment: true},
-// username: {type: String, required: true, unique: true, trim: true, lowercase: true},
-// email: {type: String, unique: true, trim: true, lowercase: true, 
-//     validate: [Validator.isEmail, 'Invalid Email Address']
-// },
-// password: {type: String, required: true}
-
-
-// })
+module.exports = User; 
