@@ -1,8 +1,8 @@
 const { Schema, model } = require("mongoose");
 const bcrypt = require("bcrypt");
 
-// import schema from Comment.js
-const commentSchema = require("./Comment");
+// import schema from Comment.js (Uncomment this later)
+// const commentSchema = require("./Comment");
 
 const userSchema = new Schema(
     {
@@ -22,7 +22,8 @@ const userSchema = new Schema(
             required: true,
             minlength: 4,
         },
-        savedComments: [commentSchema],
+        // Uncomment this later
+        // savedComments: [commentSchema],
     },
     {
         toJSON: {
