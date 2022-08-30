@@ -21,19 +21,19 @@ function App(){
   <Navbar/>
      </div>
       <Routes>
-       <Route path="/Home"
+       <Route path="/home"
        element={<Home />} 
        />
-       <Route path="/About"
+       <Route path="/about"
        element={<About />} 
        />
-       <Route path="/Beginner"
+       <Route path="/beginner"
        element={<Beginner />} 
        />
-       <Route path="/Login"
+       <Route path="/login"
        element={<Login />} 
        />
-       <Route path="/Profile"
+       <Route path="/profile"
        element={<Profile />} 
        />
 
