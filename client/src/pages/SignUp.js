@@ -84,6 +84,8 @@ const SignUp = () => {
                             </button>
                         </form>
                     )}
+
+                    {/* TODO: Add in error message? */}
                 </div>
             </article>
         </main>
