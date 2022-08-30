@@ -1,38 +1,31 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-const Navbar = ({ handlePageChange, currentPage}) => {
+import Home from '../pages/Home';
+// import Profile from '../pages/Profile';
+// import Beginner from '../pages/Beginner';
+// import About from '../pages/About';
+// import Advanced from '../pages/Advanced';
+
+
+function Navbar () {
     return (
         <div>
-            <a href="#Home" 
-            onClick={() => handlePageChange('Home')}
-            className={currentPage === 'Home' ? 'nav-link active' : 'nav-link'}>
-                Home
-            </a>
-            <a href="#About" 
-            onClick={() => handlePageChange('About')}
-            className={currentPage === 'About' ? 'nav-link active' : 'nav-link'}>
-                About
-            </a>
-            <a href="#Courses" 
-            onClick={() => handlePageChange('Courses')}
-            className={currentPage === 'Courses' ? 'nav-link active' : 'nav-link'}>
-                Courses
-            </a>
-            <a href="#Login" 
-            onClick={() => handlePageChange('Login')}
-            className={currentPage === 'Login' ? 'nav-link active' : 'nav-link'}>
-                Login
-            </a>
-            <a href="#Profile" 
-            onClick={() => handlePageChange('Home')}
-            className={currentPage === 'Profile' ? 'nav-link active' : 'nav-link'}>
-                Profile
-            </a>
-
-
-
-
-
+            <Link to = "/Home"> 
+                <h3>Home</h3>
+            </Link>
+            <Link to="/About"> 
+            <h3>About</h3>
+            </Link>
+            <Link to="/Beginner"> 
+            <h3>Beginner</h3>
+            </Link>
+            <Link to="/Login"> 
+            <h3>Login</h3>
+            </Link>
+            <Link to="/Profile"> 
+            <h3>Profile</h3>
+            </Link>
         </div>
     )
 };
