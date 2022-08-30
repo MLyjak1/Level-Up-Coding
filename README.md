@@ -70,4 +70,5 @@ To be Added:
 
     * Set up Initial Folder and File Structure
     * Added Potential necessary packages to package.json
-    * Began README 
+    * Began README
+    * Built Server connection and tested
