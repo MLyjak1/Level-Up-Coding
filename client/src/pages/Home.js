@@ -1,10 +1,9 @@
 import React from 'react';
 
-const Home = () => {
-<main>
-<h1>Home</h1>
-</main>
-
+const Beginner = () => {
+    return(
+    <h1>Beginner</h1>
+    )
 };
 
 export default Home;

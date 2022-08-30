@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Beginner () {
+const Beginner = () => {
 return(
 <h1>Beginner</h1>
 )

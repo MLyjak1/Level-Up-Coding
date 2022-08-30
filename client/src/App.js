@@ -3,7 +3,11 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 // import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
 import './App.css';
 import Navbar from "./components/Navbar.js"
-// import Home from './pages/Home';
+import Home from './pages/Home';
+import Beginner from './pages/Beginner';
+import Profile from './pages/Profile';
+import About from './pages/About';
+import Login from './pages/Login';
 
 // const client = new ApolloClient({
 //   uri: '/graphql',
@@ -16,14 +20,26 @@ function App(){
     <div>
   <Navbar/>
      </div>
-     {/* <Routes> */}
-       {/* <Route path="/" */}
-       {/* element={<Home />} */}
-       {/* /> */}
+      <Routes>
+       <Route path="/Home"
+       element={<Home />} 
+       />
+       <Route path="/About"
+       element={<About />} 
+       />
+       <Route path="/Beginner"
+       element={<Beginner />} 
+       />
+       <Route path="/Login"
+       element={<Login />} 
+       />
+       <Route path="/Profile"
+       element={<Profile />} 
+       />
 
-     {/* </Routes> */}
-   </Router>
- )
+      </Routes> 
+    </Router>
+ );
 };
 
 
