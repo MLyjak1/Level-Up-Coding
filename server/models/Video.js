@@ -1,5 +1,5 @@
 const { Schema, model } = require("mongoose");
-import commentSchema from './Comment';
+const commentSchema = require('./Comment');
 
 const videoSchema = new Schema({
   videoLink: {

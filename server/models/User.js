@@ -26,7 +26,12 @@ const userSchema = new Schema(
                 ref: "Comment",
             },
         ],
-    },
+    }, 
+    {
+        toJSON: {
+            virtuals: true,
+        }
+    }
 );
 
 // Hashes the user's password
