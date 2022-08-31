@@ -9,8 +9,19 @@ export const QUERY_USER = gql`
             comments {
                 _id
                 commentText
+                username
                 createdAt
             }
+        }
+    }
+`;
+
+export const QUERY_COMMENTS = gql`
+    query getComments {
+        comments {
+            _id
+            commentText
+            username
         }
     }
 `;
