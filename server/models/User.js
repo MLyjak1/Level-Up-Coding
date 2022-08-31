@@ -19,14 +19,19 @@ const userSchema = new Schema(
             required: true,
             minlength: 4,
         },
-        // Uncomment this later
+        //Check again next time
         comments: [
             {
                 type: Schema.Types.ObjectId,
                 ref: "Comment",
             },
         ],
-    },
+    }, 
+    {
+        toJSON: {
+            virtuals: true,
+        }
+    }
 );
 
 // Hashes the user's password
