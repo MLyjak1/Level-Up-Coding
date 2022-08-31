@@ -19,6 +19,7 @@ import Navbar from "./components/Navbar.js";
 
 // Imports style
 import "./App.css";
+import Intermediate from "./pages/Intermediate";
 
 // Construct our main GraphQL API Endpoint
 const httpLink = createHttpLink({
@@ -54,6 +55,7 @@ function App() {
 					<Route path="/" element={<Home />} />
 					<Route path="/about" element={<About />} />
 					<Route path="/beginner" element={<Beginner />} />
+					<Route path="/intermediate" element={<Intermediate />} />
 					<Route path="/login" element={<Login />} />
           <Route path="/signup" element={<SignUp />} />
 					<Route path="/profile" element={<Profile />} />
