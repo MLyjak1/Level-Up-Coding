@@ -6,13 +6,15 @@ import { ADD_USER } from '../utils/mutations';
 
 import Auth from '../utils/auth';
 
+// import "./pages.css";
+
 const SignUp = () => {
     const [formState, setFormState] = useState({
         username: '',
         email: '',
         password: '',
     });
-    
+
     const [addUser, { error, data }] = useMutation(ADD_USER);
 
     // Updates the state based on the form input changes
@@ -42,55 +44,59 @@ const SignUp = () => {
     };
 
     return (
-        <main>
-            {/* TODO: Style the login card! */}
-            <article className='login-card'>
-                <div className='login-card-header'>Sign Up</div>
-                <div className='login-card-body'>
-                    {/* If there is data, return to homepage */}
-                    {data ? (<Link to='/'></Link>) : (
-                        <form
-                            className='flex flex-col'
-                            onSubmit={handleFormSubmit}>
-                            <input 
-                                className='form-input'
-                                placeholder='Username'
-                                name='username'
-                                type='text'
-                                value={formState.username}
-                                onChange={handleChange}
-                            />
-                            <input 
-                                className='form-input'
-                                placeholder='Email'
-                                name='email'
-                                type='email'
-                                value={formState.email}
-                                onChange={handleChange}
-                            />
-                            <input 
-                                className='form-input'
-                                placeholder='Password'
-                                name='password'
-                                type='password'
-                                value={formState.password}
-                                onChange={handleChange}
-                            />
-                            {/* Hovering over submit button changes cursor to be pointer */}
-                            <button
-                                className='submit-btn'
-                                style={{ cursor: 'pointer' }}
-                                type='submit'
-                            >
-                                Submit
-                            </button>
-                        </form>
-                    )}
+        <div className='box'>
+            <div className='panel'>
+                <main>
+                    {/* TODO: Style the login card! */}
+                    <article className='login-card'>
+                        <div className='login-card-header'>Sign Up</div>
+                        <div className='login-card-body'>
+                            {/* If there is data, return to homepage */}
+                            {data ? (<Link to='/'></Link>) : (
+                                <form
+                                    className='flex flex-col'
+                                    onSubmit={handleFormSubmit}>
+                                    <input
+                                        className='form-input'
+                                        placeholder='Username'
+                                        name='username'
+                                        type='text'
+                                        value={formState.username}
+                                        onChange={handleChange}
+                                    />
+                                    <input
+                                        className='form-input'
+                                        placeholder='Email'
+                                        name='email'
+                                        type='email'
+                                        value={formState.email}
+                                        onChange={handleChange}
+                                    />
+                                    <input
+                                        className='form-input'
+                                        placeholder='Password'
+                                        name='password'
+                                        type='password'
+                                        value={formState.password}
+                                        onChange={handleChange}
+                                    />
+                                    {/* Hovering over submit button changes cursor to be pointer */}
+                                    <button
+                                        className='submit-btn'
+                                        style={{ cursor: 'pointer' }}
+                                        type='submit'
+                                    >
+                                        Submit
+                                    </button>
+                                </form>
+                            )}
 
-                    {/* TODO: Add in error message? */}
-                </div>
-            </article>
-        </main>
+                            {/* TODO: Add in error message? */}
+                        </div>
+                    </article>
+                </main>
+            </div>
+        </div>
     );
 };
 
