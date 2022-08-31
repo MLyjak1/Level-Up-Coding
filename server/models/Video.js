@@ -41,6 +41,6 @@ const videoSchema = new Schema({
   ],
 });
 
-const Thought = model("Thought", thoughtSchema);
+const Video = model("Video", videoSchema);
 
-module.exports = Thought;
+module.exports = Video;
