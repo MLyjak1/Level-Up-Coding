@@ -9,28 +9,19 @@ function Navbar () {
     };
     return (
 		<nav className="flex justify-center">
-			<Link to="/">
-				<h3>Home</h3>
-			</Link>
-			<Link to="/about">
-				<h3>About</h3>
-			</Link>
+			<Link to="/">Home</Link>
+			<Link to="/about">About</Link>
 			{Auth.loggedIn() ? (
 				<>
 					<Link to="/profile">Profile</Link>
+                    <button onClick={logout}>Logout</button>
 				</>
 			) : (
 				<>
 					<Link to="/login">Login</Link>
-					<Link to="/signup">Signup</Link>
+					<Link to="/signup">Sign Up</Link>
 				</>
 			)}
-			{/* <Link to="/login">
-				<h3>Login</h3>
-			</Link>
-			<Link to="/profile">
-				<h3>Profile</h3>
-			</Link> */}
 		</nav>
 	);
 };
