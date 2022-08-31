@@ -12,6 +12,10 @@ const videoSchema = new Schema({
   //     required: true,
   //     trim: true,
   //   },
+  courseLevel: {
+    type: String,
+    required: true,
+  },
   createdAt: {
     type: Date,
     default: Date.now,
@@ -20,6 +24,29 @@ const videoSchema = new Schema({
     },
   },
   comments: [commentSchema],
+  // comments: [
+  //   {
+  //     commentText: {
+  //       type: String,
+  //       required: true,
+  //       minlength: 1,
+  //       maxlength: 280,
+  //     },
+  //     // userId: {
+  //     //   type: String,
+  //     //   required: true,
+  //     // },
+  //     userId: {
+  //       type: Schema.Types.ObjectId,
+  //       ref: "User",
+  //     },
+  //     createdAt: {
+  //       type: Date,
+  //       default: Date.now,
+  //       get: (timestamp) => dateFormat(timestamp),
+  //     },
+  //   },
+  // ]
 });
 
 const Video = model("Video", videoSchema);
