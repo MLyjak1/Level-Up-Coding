@@ -1,42 +1,29 @@
 const { Schema, model } = require("mongoose");
-const commentSchema = require('./Comment');
+const commentSchema = require("./Comment");
 
-const videoSchema = new Schema(
-  {
-    videoId: {
-      type: Schema.Types.ObjectId,
-      default: () => new Types.ObjectId(),
+const videoSchema = new Schema({
+  videoLink: {
+    type: String,
+    // required: 'You need to leave a thought!',
+    minlength: 1,
+  },
+  //   videoAuthor: {
+  //     type: String,
+  //     required: true,
+  //     trim: true,
+  //   },
+  courseLevel: {
+    type: String,
+    required: true,
+  },
+  createdAt: {
+    type: Date,
+    default: Date.now,
+    get: (date) => {
+      if (date) return date.toISOString().split("T")[0];
     },
-    videoLink: {
-      type: String,
-      // required: 'You need to leave a thought!',
-      minlength: 1,
-    },
-    //   videoAuthor: {
-    //     type: String,
-    //     required: true,
-    //     trim: true,
-    //   },
-    courseLevel: {
-      type: String,
-      required: true,
-    },
-    createdAt: {
-      type: Date,
-      default: Date.now,
-      get: (date) => {
-        if (date) return date.toISOString().split("T")[0];
-      },
-    },
-    comments: [commentSchema],
-  }
-);
-
-const Video = model("Video", videoSchema);
-
-module.exports = Video;
-
-
+  },
+  comments: [commentSchema],
   // comments: [
   //   {
   //     commentText: {
@@ -60,3 +47,8 @@ module.exports = Video;
   //     },
   //   },
   // ]
+});
+
+const Video = model("Video", videoSchema);
+
+module.exports = Video;
