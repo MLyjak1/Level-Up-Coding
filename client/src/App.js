@@ -1,97 +1,72 @@
-import React, { useState } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-// import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
-import './App.css';
-import Navbar from "./components/Navbar.js"
-import Home from './pages/Home';
-import Beginner from './pages/Beginner';
-import Profile from './pages/Profile';
-import About from './pages/About';
-import Login from './pages/Login';
+import React from "react";
+import {
+	ApolloClient,
+	InMemoryCache,
+	ApolloProvider,
+	createHttpLink,
+} from "@apollo/client";
+import { setContext } from "@apollo/client/link/context";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-// const client = new ApolloClient({
-//   uri: '/graphql',
-//   cache: new InMemoryCache(),
-// });
+// Imports pages and components
+import Home from "./pages/Home";
+import Beginner from "./pages/Beginner";
+import Profile from "./pages/Profile";
+import About from "./pages/About";
+import Login from "./pages/Login";
+import SignUp from "./pages/SignUp";
+import Navbar from "./components/Navbar.js";
 
-function App(){
- return(
-  <Router>
-    <div>
-  <Navbar/>
-     </div>
-      <Routes>
-       <Route path="/home"
-       element={<Home />} 
-       />
-       <Route path="/about"
-       element={<About />} 
-       />
-       <Route path="/beginner"
-       element={<Beginner />} 
-       />
-       <Route path="/login"
-       element={<Login />} 
-       />
-       <Route path="/profile"
-       element={<Profile />} 
-       />
+// Imports style
+import "./App.css";
 
-      </Routes> 
-    </Router>
- );
-};
+// Construct our main GraphQL API Endpoint
+const httpLink = createHttpLink({
+  uri: "/graphql",
+});
 
 
+const authLink = setContext((_, { headers }) => {
+  const token = localStorage.getItem("id_token");
+  return {
+    headers: {
+      ...headers,
+      authorization: token ? `Bearer ${token}` : '',
+    },
+  };
+});
+
+
+// Sets up client to execute the "authLink" middleware prior to making the request to our GraphQL API
+const client = new ApolloClient({
+	link: authLink.concat(httpLink),
+	cache: new InMemoryCache(),
+});
+
+function App() {
+	return (
+		<ApolloProvider client={client}>
+			<Router>
+				<div>
+					<Navbar />
+				</div>
+				<Routes>
+					<Route path="/home" element={<Home />} />
+					<Route path="/about" element={<About />} />
+					<Route path="/beginner" element={<Beginner />} />
+					<Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<SignUp />} />
+					<Route path="/profile" element={<Profile />} />
+				</Routes>
+			</Router>
+		</ApolloProvider>
+	);
+}
 
 export default App;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // export default function App() {
-  
+
 //   const [currentPage, setCurrentPage] = useState('Home');
 
 //   const renderPage = () => {
@@ -111,8 +86,6 @@ export default App;
 //   };
 
 //   const handlePageChange = (page) => setCurrentPage(page);
-
- 
 
 //   <div className="App">
 //     <Navbar currentPage={currentPage} handlePageChange={handlePageChange} />
@@ -134,5 +107,3 @@ export default App;
 //   </div>
 
 // }
-
-

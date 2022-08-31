@@ -49,7 +49,9 @@ const SignUp = () => {
                 <div className='login-card-body'>
                     {/* If there is data, return to homepage */}
                     {data ? (<Link to='/'></Link>) : (
-                        <form onSubmit={handleFormSubmit}>
+                        <form
+                            className='flex flex-col'
+                            onSubmit={handleFormSubmit}>
                             <input 
                                 className='form-input'
                                 placeholder='Username'

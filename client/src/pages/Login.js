@@ -1,13 +1,12 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-
 import { useMutation } from '@apollo/client';
 import { LOGIN_USER } from '../utils/mutations';
 
 import Auth from '../utils/auth';
 
 const Login = (props) => {
-    const [formState, setFormState] = useState({ email: ', password: ' });
+    const [formState, setFormState] = useState({ email: '', password: '' });
     const [login, { error, data }] = useMutation(LOGIN_USER);
 
     // Updates the state based on the form input changes
@@ -42,14 +41,18 @@ const Login = (props) => {
     };
 
     return (
-        <main>
+        <main className='justify-items-center'>
             {/* TODO: Style the login card! */}
-            <article className='login-card'>
-                <div className='login-card-header'>Login</div>
-                <div className='login-card-body'>
+            <article className='login-card flex flex-col '>
+                <div className='login-card-header'>
+                    <h2>Login</h2>
+                </div>
+                <div className='login-card-body flex-col '>
                     {/* If there is data, return to homepage */}
                     {data ? (<Link to='/'></Link>) : (
-                        <form onSubmit={handleFormSubmit}>
+                        <form 
+                            className='flex flex-col '
+                            onSubmit={handleFormSubmit}>
                             <input 
                                 className='form-input'
                                 placeholder='Username'
