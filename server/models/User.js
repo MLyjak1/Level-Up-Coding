@@ -1,9 +1,6 @@
 const { Schema, model } = require("mongoose");
 const bcrypt = require("bcrypt");
 
-// import schema from Comment.js (Uncomment this later)
-const commentSchema = require("./Comment");
-
 const userSchema = new Schema(
     {
         username: {
@@ -23,13 +20,13 @@ const userSchema = new Schema(
             minlength: 4,
         },
         // Uncomment this later
-        savedComments: [commentSchema],
+        comments: [
+            {
+                type: Schema.Types.ObjectId,
+                ref: "Comment",
+            },
+        ],
     },
-    {
-        toJSON: {
-            virtuals: true,
-        },
-    }
 );
 
 // Hashes the user's password
