@@ -1,4 +1,5 @@
 const { Schema, model } = require("mongoose");
+import commentSchema from './Comment';
 
 const videoSchema = new Schema({
   videoLink: {
@@ -18,27 +19,7 @@ const videoSchema = new Schema({
       if (date) return date.toISOString().split("T")[0];
     },
   },
-  comments: [
-    {
-      commentText: {
-        type: String,
-        required: true,
-        minlength: 1,
-        maxlength: 280,
-      },
-      commentAuthor: {
-        type: String,
-        required: true,
-      },
-      createdAt: {
-        type: Date,
-        default: Date.now,
-        get: (date) => {
-          if (date) return date.toISOString().split("T")[0];
-        },
-      },
-    },
-  ],
+  comments: [commentSchema],
 });
 
 const Video = model("Video", videoSchema);

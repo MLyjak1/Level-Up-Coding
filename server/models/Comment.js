@@ -8,10 +8,13 @@ const commentSchema = new Schema({
         maxlength: 280,
         trim: true,
     },
-    commentAuthor: {
-        type: String,
-        required: true,
-    },
+    userId: [
+        {
+            type: Schema.Types.ObjectId,
+            ref: 'User',
+        }
+    ],
+
     createdAt: {
         type: Date,
         default: Date.now,
