@@ -25,7 +25,7 @@ const ViewVideo = () => {
             <div>{video.description}</div>
             <div>{video.videoLink}</div>
             {/* <Video /> */}
-            <CommentForm />
+            {/* <CommentForm /> */}
         </div>
 
     );
