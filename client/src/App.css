@@ -54,3 +54,88 @@ body {
   border-radius: 50px;
   font-family: 'Russo One', sans-serif;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.aboutPage {
+  color: #CC917A;
+  font-family: 'Russo One', sans-serif;
+}
+
+.aboutTitle {
+  font-size: 36px;
+  font-weight: bolder;
+  margin-top: 1rem;
+}
+
+.aboutContent {
+  width: 400px;
+  margin-top: 1rem;
+  margin-left: 27rem;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  background-color: #1E1E1E;
+  border-radius: 50px;
+}
+
+.contentDescr {
+  justify-content: center;
+  font-size: large;
+}
+
+.developers {
+  margin-top: 1rem;
+  width: 500px;
+  margin-left: 23.5rem;
+  margin-bottom: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  background-color: #1E1E1E;
+  border-radius: 50px;
+  
+}
