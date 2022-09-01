@@ -19,7 +19,7 @@ const About = () => {
         </p>
       </section>
       <section className="developers ">
-        <table className="">
+        <table className="devbox">
           <tr>
             <th>Team</th>
             <th>Socials</th>

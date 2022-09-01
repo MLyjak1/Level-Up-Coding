@@ -28,7 +28,7 @@ body {
   padding-top: .5em; */
   /* display:flex;
   justify-content: center; */
-  /* font-size: xx-large; */
+  font-size: x-large;
   border-radius: 50px;
   font-family: 'Russo One', sans-serif;
 }
@@ -100,9 +100,15 @@ body {
   font-size: large;
 }
 
+/* .devbox{
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: center;
+} */
+
 .developers {
   margin-top: 1rem;
-   
+    
 }
 
 .dropdown {
