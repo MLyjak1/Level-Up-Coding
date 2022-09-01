@@ -36,7 +36,7 @@ const Home = () => {
 
         <div className='intermediate'>
             <h1 className='intermediateHeader'>Intermediate Coding Tutorials</h1>
-                <iframe src=''></iframe>
+                <embed src={intermediate.videoLink}></embed>
                 <p className='intermediate-text'>
                     Placeholder text, will come back and finish later. Will describe the 3 intermediate videos.
                 </p>
@@ -50,7 +50,7 @@ const Home = () => {
 
         <div className='advanced'>
             <h1 className='advancedHeader'>Advanced Coding Tutorials</h1>
-                <iframe src=''></iframe>
+                <embed src={advanced.videoLink}></embed>
                 <p className='advanced-text'>
                     Placeholder text, will come back and finish later. Will describe the 3 advanced videos.
                 </p>

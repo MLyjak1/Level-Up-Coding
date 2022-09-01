@@ -63,50 +63,13 @@ body {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .aboutPage {
   color: #CC917A;
   font-family: 'Russo One', sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 }
 
 .aboutTitle {
@@ -120,10 +83,6 @@ body {
   margin-top: 1rem;
   margin-left: 27rem;
   text-align: center;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
   background-color: #1E1E1E;
   border-radius: 50px;
 }
