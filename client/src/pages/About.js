@@ -4,15 +4,15 @@ const About = () => {
     return (
         <main className="aboutPage">
             <title className="aboutTitle flex justify-center">
-                <h1 className="">About</h1>
+                <h1 className="aboutTitle">About</h1>
             </title>
 
-            <section className=" aboutContent container flex flex-wrap justify-center">
-                <p className="">
-                    Thanks for visiting our website! 
-                    Our goal at Level Up coding is to help people learn how to code at any level of experience! 
-                    Feel free to navigate to the different course pages to watch whichever tutorial you are interested.
-                    Please look at the information below to contact one of the developers. Happy coding!
+            <section className="aboutContent">
+                <p className="contentDescr">
+                    Thanks for visiting our website! <br />
+                    Our goal at Level Up coding is to help people learn how to code at any level of experience!
+                    Feel free to navigate to the different course pages to watch whichever tutorial you are interested. <br />
+                    Please look at the information below to contact one of the developers. <br /> Happy coding!
                 </p>
             </section>
             <section className="developers ">
