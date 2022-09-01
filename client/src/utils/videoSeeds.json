@@ -10,7 +10,7 @@
     {
         "videoLink": "https://www.youtube.com/embed/EP9QMdoXvXE",
         "title": "Web Development: Intro to Css",
-        "description": "This video shows the beginning steps to styling your webpage",
+        "description": "This video shows the beginning steps to styling your webpage", 
         "videoAuthor": "code.org",
         "authorLink": "https://www.youtube.com/c/codeorg",
         "courseLevel": "beginner"

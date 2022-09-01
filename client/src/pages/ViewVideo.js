@@ -1,8 +1,9 @@
 import React from "react";
-import Video from "../components/Video";
+// import Video from "../components/Video";
 import { useParams } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
 import { QUERY_SINGLE_VIDEO } from '../utils/queries';
+import CommentForm from "../components/CommentForm";
 
 const ViewVideo = () => {
     const { videoId } = useParams();
@@ -12,6 +13,8 @@ const ViewVideo = () => {
       });
 
     const video = data?.video || {};
+    console.log(data)
+    console.log(video);
     if (loading) {
         return <div>Loading...</div>;
     }
@@ -21,8 +24,10 @@ const ViewVideo = () => {
             <div>id: {video._id}</div>
             <div>{video.description}</div>
             <div>{video.videoLink}</div>
-            <Video />
+            {/* <Video /> */}
+            {/* <CommentForm /> */}
         </div>
+
     );
 };
 
