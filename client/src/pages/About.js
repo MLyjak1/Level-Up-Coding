@@ -2,6 +2,7 @@ import React from "react";
 
 const About = () => {
   return (
+    
     <main className="aboutPage">
       <title className="aboutTitle flex justify-center">
         <h1 className="aboutTitle">About</h1>
