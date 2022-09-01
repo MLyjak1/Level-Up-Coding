@@ -24,11 +24,11 @@ body {
 .navbar{
   background-color: #1E1E1E;
   color: lightskyblue;
-  padding-bottom: .5em;
-  padding-top: .5em;
-  display:flex;
-  justify-content: center;
-  font-size: xx-large;
+  /* padding-bottom: .5em;
+  padding-top: .5em; */
+  /* display:flex;
+  justify-content: center; */
+  /* font-size: xx-large; */
   border-radius: 50px;
   font-family: 'Russo One', sans-serif;
 }
@@ -43,6 +43,10 @@ body {
 
 .profile{
   color: #55C9B0;
+}
+
+.courses {
+  color: lightskyblue;
 }
 
 .box{
@@ -149,14 +153,13 @@ body {
 
 .dropdown {
   float: left;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 /* Dropdown button */
 .dropdown .dropbtn {
   border: none;
   outline: none;
-  padding: 14px 16px;
   background-color: inherit;
   font-family: inherit; 
   margin: 0; 
@@ -166,7 +169,7 @@ body {
 .navbar a:hover, .dropdown:hover .dropbtn {
   background-color:  #3C3C3C;
   border-radius: 50px;
-  padding: 1rem;
+  padding: .5rem;
 }
 
 /* Dropdown content (hidden by default) */

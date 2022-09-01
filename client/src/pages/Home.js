@@ -20,9 +20,9 @@ const Home = () => {
 
     return(
         <section className='homePage'>
-        <div className='beginner'>
+        <div className='beginner '>
             <h1 className='beginnerHeader'>Beginner Coding Tutorials</h1>
-                <embed src={beginner.videoLink}></embed>
+                <embed className="" src={beginner.videoLink}></embed>
                 <p className='beginner-text'>
                     Placeholder text, will come back and finish later. Will describe the 3 beginner videos.
                 </p>
