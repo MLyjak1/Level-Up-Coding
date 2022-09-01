@@ -39,6 +39,7 @@ const typeDefs = gql`
 		user(username: String!): User
 		videos(courseLevel: String!): [Video]
 		video(videoId: ID!): Video
+		userComments(username: String!): [Video]
 	}
 
 	type Mutation {

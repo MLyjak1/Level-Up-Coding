@@ -26,16 +26,23 @@ const CommentForm = ({ videoId }) => {
 
     const handleFormSubmit = async (event) => {
         event.preventDefault();
+        console.log(event);
 
         try {
+
+            console.log(videoId, commentText, Auth.getProfile().data.username);
             const { data } = await addComment({
                 variables: {
+                    videoId,
                     commentText,
                     username: Auth.getProfile().data.username,
                 }
             });
+            window.location.reload();
+            console.log(data);
         } catch (err) {
             console.error(err);
+            console.log(err);
         }
     };
 

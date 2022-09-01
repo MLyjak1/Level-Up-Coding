@@ -16,7 +16,11 @@ const resolvers = {
         },
         video: async (parent, { videoId }) => {
             return Video.findOne({ _id: videoId });
+        },
+        userComments: async (parent, { username }) => {
+            return Video.find({ comment: { username: username }});
         }
+
     },
 
     Mutation: {

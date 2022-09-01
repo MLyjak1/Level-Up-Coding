@@ -67,3 +67,24 @@ export const QUERY_SINGLE_VIDEO = gql`
         }
     }
 `;
+
+
+export const QUERY_USER_COMMENTS = gql`
+    query getUserComments ($username: String!) {
+        userComments(username: $username) {
+            _id
+            videoLink
+            title
+            description
+            videoAuthor
+            authorLink
+            courseLevel
+            comments {
+                _id
+                commentText
+                username
+                createdAt
+            }
+        }
+    }
+`;

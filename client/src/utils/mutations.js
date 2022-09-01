@@ -36,9 +36,12 @@ export const ADD_COMMENT = gql`
             username: $username
         ) {
             _id
-            commentText
-            username
-            createdAt
+            videoLink
+            title
+            description
+            videoAuthor
+            authorLink
+            courseLevel
             comments {
                 _id
                 commentText

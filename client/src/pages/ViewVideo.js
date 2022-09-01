@@ -23,7 +23,7 @@ const ViewVideo = () => {
         <div>
             <div>id: {video._id}</div>
             <embed src={video.videoLink}></embed>
-            <div>{video.description}</div>
+            {/* <div>{video.description}</div> */}
 
             <div class="max-w-sm w-full lg:max-w-full lg:flex">
             <div class="border-r border-b border-l border-gray-400 lg:border-l-0 lg:border-t lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
