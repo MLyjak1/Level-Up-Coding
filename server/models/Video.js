@@ -20,7 +20,7 @@ const videoSchema = new Schema({
 	},
 	videoAuthor: {
 		type: String,
-		required: true,
+		// required: true,
 		trim: true,
 	},
 	authorLink: {
