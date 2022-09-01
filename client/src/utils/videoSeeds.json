@@ -1,60 +1,74 @@
 [
     {
-        "_id": 1,
         "videoLink": "https://www.youtube.com/embed/6vJOOhjt3aw",
-        "title": "",
-        "description": "Description will go here",
-        "videoAuthor": "What Make Art - https://www.youtube.com/c/WhatMakeArt",
+        "title": "Learn Basic HTML - Hello World",
+        "description": "This video will teach you how to set up and create a basic HTML page that displays 'Hello World' on it.",
+        "videoAuthor": "What Make Art",
+        "authorLink": "https://www.youtube.com/c/WhatMakeArt",
         "courseLevel": "beginner"
     },
     {
-        "_id": 2,
-        "videoLink": "",
-        "videoAuthor": "",
+        "videoLink": "https://www.youtube.com/embed/EP9QMdoXvXE",
+        "title": "Web Development: Intro to Css",
+        "description": "This video shows the beginning steps to styling your webpage",
+        "videoAuthor": "code.org",
+        "authorLink": "https://www.youtube.com/c/codeorg",
         "courseLevel": "beginner"
     },
     {
-        "_id": 3,
-        "videoLink": "",
-        "videoAuthor": "",
+        "videoLink": "https://www.youtube.com/embed/Ukg_U3CnJWI",
+        "title": "Learn JavaScript in 12 Minutes",
+        "description": "Learn the basics of javascript and how to use it",
+        "videoAuthor": "Jake Wright",
+        "authorLink": "https://www.youtube.com/c/JakewrightNet",
         "courseLevel": "beginner"
     },
     {
-        "_id": 4,
-        "videoLink": "https://www.youtube.com/embed/6vJOOhjt3aw",
-        "description": "Description will go here",
-        "videoAuthor": "What Make Art - https://www.youtube.com/c/WhatMakeArt",
+        "videoLink": "https://www.youtube.com/embed/s9wW2PpJsmQ",
+        "title": "Javascript Loops",
+        "description": "An overview of some of the loops that can be used in javascript",
+        "videoAuthor": "Programming with Mosh",
+        "authorLink": "https://www.youtube.com/c/programmingwithmosh",
         "courseLevel": "intermediate"
     },
     {
-        "_id": 5,
-        "videoLink": "",
-        "videoAuthor": "",
+        "videoLink": "https://www.youtube.com/embed/27axs9dO7AE",
+        "title": "What is SQL? [in 4 minutes for beginners]",
+        "description": "What is a database?  How does SQL code work?  Learn these concepts in this video",
+        "videoAuthor": "Denielle The",
+        "authorLink": "https://www.youtube.com/c/DanielleTh%C3%A9",
         "courseLevel": "intermediate"
     },
     {
-        "_id": 6,
-        "videoLink": "",
-        "videoAuthor": "",
+        "videoLink": "https://www.youtube.com/embed/dyMCr2lD5k0",
+        "title": "Express JS in 15 Minutes",
+        "description": "This video teaches you an overview of express, how to initialize it, and how to create different requests",
+        "videoAuthor": "Simplilearn",
+        "authorLink": "https://www.youtube.com/c/SimplilearnOfficial",
         "courseLevel": "intermediate"
     },
     {
-        "_id": 7,
-        "videoLink": "https://www.youtube.com/embed/6vJOOhjt3aw",
-        "description": "Description will go here",
-        "videoAuthor": "What Make Art - https://www.youtube.com/c/WhatMakeArt",
+        "videoLink": "https://www.youtube.com/embed/9hb_0TZ_MVI&list=PLC3y8-rFHvwgg3vaYJgHGnModB54rxOk3&index=2",
+        "title": "React Tutorial - 2 - Hello World",
+        "description": "Create a simple react web app",
+        "videoAuthor": "condevolution",
+        "authorLink": "https://www.youtube.com/c/Codevolution",
         "courseLevel": "advanced"
     },
     {
-        "_id": 8, 
-        "videoLink": "",
-        "videoAuthor": "",
+        "videoLink": "https://www.youtube.com/embed/bgPuPSPZe2U",
+        "title": "you need to learn AWS RIGHT NOW!! (Amazon Web Services)",
+        "description": "Instructions for how to setup an Amazon Web Server",
+        "videoAuthor": "NetworkChuck",
+        "authorLink": "https://www.youtube.com/c/NetworkChuck",
         "courseLevel": "advanced"
     },
     {
-        "_id": 9,
-        "videoLink": "",
-        "videoAuthor": "",
+        "videoLink": "https://www.youtube.com/embed/U10yvfIStx8",
+        "title": "2: Basic Syntax in PHP",
+        "description": "Introduction to PHP coding",
+        "videoAuthor": "Dani Krossing",
+        "authorLink": "https://www.youtube.com/c/TheCharmefis",
         "courseLevel": "advanced"
     }
 ]

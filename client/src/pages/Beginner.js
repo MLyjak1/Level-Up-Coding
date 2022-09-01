@@ -1,39 +1,24 @@
 import React from "react";
-import { Link } from 'react-router-dom';
-import { useQuery } from '@apollo/client';
-import { QUERY_VIDEOS } from '../utils/queries';
+import videos from "../utils/videoSeeds.json";
 
 const Beginner = () => {
-	
-    const { loading, data } = useQuery(QUERY_VIDEOS, {
-        // pass URL parameter
-        variables: { courseLevel: "beginner" },
-      });
-
-    const beginners = data?.videos || {};
-    if (loading) {
-        return <div>Loading...</div>;
-    }
-	return (
-		<div className="box">
-			<div className="panel">
-				<div className="beginner-page">
-					{beginners.map((video) => (
-						<div key={video._id} className="{video.title}">
-							<embed src={video.videoLink}></embed>
-							<p className="beginner-text-1">{video.description}</p>
-
-							<Link
-								className="btn btn-primary btn-block btn-squared"
-								to={`/videos/${video._id}`}
-								> See More</Link>
-						</div>
-					))}
-				</div>
-			</div>
-			{/* <div>test</div> */}
-		</div>
-	);
+  const beginner = videos.filter(
+    (obj) => obj.courseLevel == "beginner",
+  );
+  return (
+    <div className="box">
+      <div className="panel">
+        <div className="beginner-page">
+          {beginner.map((obj) => (
+            <div key={obj._id} className="{obj.title}">
+              <embed src={obj.videoLink}></embed>
+              <p className="beginner-text-1">{obj.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default Beginner;
