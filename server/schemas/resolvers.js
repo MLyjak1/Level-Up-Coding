@@ -11,6 +11,12 @@ const resolvers = {
         user: async (parent, { username }) => {
             return User.findOne({ username }).populate('comments');
         },
+        videos: async (parent, { courseLevel }) => {
+            return Video.find({ courseLevel: courseLevel });
+        },
+        video: async (parent, { videoId }) => {
+            return Video.findOne({ _id: videoId });
+        }
     },
 
     Mutation: {

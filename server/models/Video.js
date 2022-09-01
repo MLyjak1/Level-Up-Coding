@@ -25,7 +25,8 @@ const videoSchema = new Schema({
 	},
 	authorLink: {
 		type: String,
-		required: true,
+		// TODO: Change it back to true?
+		required: false,
 		trim: true,
 	},
 	courseLevel: {
