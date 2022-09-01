@@ -3,6 +3,7 @@ import Video from "../components/Video";
 import { useParams } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
 import { QUERY_SINGLE_VIDEO } from '../utils/queries';
+import CommentForm from "../components/CommentForm";
 
 const ViewVideo = () => {
     const { videoId } = useParams();
@@ -22,7 +23,59 @@ const ViewVideo = () => {
             <div>{video.description}</div>
             <div>{video.videoLink}</div>
             <Video />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <CommentForm />
         </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     );
 };
 
