@@ -1,39 +1,25 @@
 import React from 'react';
+import videos from '../utils/videoSeeds.json';
 
 const Intermediate = () => {
+        const intermediate = videos.filter(obj=> obj.courseLevel == 'intermediate');
         return (
                 <div className="box">
-                        <div className='panel'>
-                                <body className='intermediate-page'>
-                                        <div className='intermediate-video-1'>
-                                                <source src='placeholder for video'
-                                                        type='placeholder'>
-                                                </source>
-                                                <p className='intermediate-text-1'>
-                                                        Placeholder text, will come back and finish later. Will describe the first intermediate video.
-                                                </p>
-                                        </div>
-
-                                        <div className='intermediate-video-2'>
-                                                <source src='placeholder for video'
-                                                        type='placeholder'>
-                                                </source>
-                                                <p className='intermediate-text-2'>
-                                                        Placeholder text, will come back and finish later. Will describe the second intermediate video.
-                                                </p>
-                                        </div>
-
-                                        <div className='intermediate-video-3'>
-                                                <source src='placeholder for video'
-                                                        type='placeholder'>
-                                                </source>
-                                                <p className='intermediate-text-3'>
-                                                        Placeholder text, will come back and finish later. Will describe the third intermediate video.
-                                                </p>
-                                        </div>
-                                </body>
+                <div className='panel'>
+                        <div className='intermediate-page'>
+                                {
+                                        intermediate.map(obj => 
+                                <div key = {obj._id} className='{obj.title}'>
+                                <embed src={obj.videoLink}>
+                                </embed>       
+                                        <p className='intermediate-text-1'>
+                                                {obj.description}
+                                        </p>
+                                </div>)
+                                }
                         </div>
                 </div>
+        </div>
         )
 };
 
