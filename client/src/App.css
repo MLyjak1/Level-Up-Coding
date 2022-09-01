@@ -13,8 +13,14 @@ body {
 }
 .bannerbox{
   background-color: #3C3C3C;
-  padding-bottom:3em;
+  padding-bottom:2em;
+  padding-top: 1em;
+  /* display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center; */
 }
+
 .navbar{
   background-color: #1E1E1E;
   color: lightskyblue;
@@ -53,6 +59,7 @@ body {
   font-size: xx-large;
   border-radius: 50px;
   font-family: 'Russo One', sans-serif;
+  
 }
 
 
