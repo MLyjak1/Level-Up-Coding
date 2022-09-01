@@ -1,12 +1,22 @@
 import React from 'react';
 import videos from '../utils/videoSeeds.json';
+import { useNavigate } from 'react-router-dom';
 
 const Home = () => {
-
+    const navigate = useNavigate();
     let beginner = videos.filter(obj=>obj.courseLevel=='beginner')[0];
     let intermediate = videos.filter(obj=>obj.courseLevel=='intermediate')[0];
     let advanced = videos.filter(obj=>obj.courseLevel=='advanced')[0];
 
+    const goToBeginnerPage = (event) => {
+        navigate("/beginner");
+    };
+    const goToIntermediatePage = (event) => {
+        navigate("/intermediate");
+    };
+    const goToAdvancedPage = (event) => {
+        navigate("/advanced");
+    };
 
     return(
         <section className='homePage'>
@@ -18,6 +28,7 @@ const Home = () => {
                 </p>
                 <button className='beginner-button'
                         style={{ cursor: 'pointer' }}
+                        onClick={goToBeginnerPage}
                 >
                     Beginner Page
                 </button>
@@ -31,6 +42,7 @@ const Home = () => {
                 </p>
                 <button className='intermediate-button'
                         style={{ cursor: 'pointer' }}
+                        onClick={goToIntermediatePage}
                 >
                     Intermediate Page 
                 </button>
@@ -44,6 +56,7 @@ const Home = () => {
                 </p>
                 <button className='advanced-button'
                         style={{ cursor: 'pointer' }}
+                        onClick={goToAdvancedPage}
                 >
                     Advanced Page
                 </button>

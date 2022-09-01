@@ -16,6 +16,7 @@ import Profile from "./pages/Profile";
 import About from "./pages/About";
 import Login from "./pages/Login";
 import SignUp from "./pages/SignUp";
+import ViewVideo from "./pages/ViewVideo";
 import Navbar from "./components/Navbar.js";
 
 // Imports style
@@ -58,8 +59,9 @@ function App() {
 					<Route path="/beginner" element={<Beginner />} />
 					<Route path="/intermediate" element={<Intermediate />} />
 					<Route path="/advanced" element={<Advanced />} />
+					<Route path="/videos/:videoId" element={<ViewVideo />} />
 					<Route path="/login" element={<Login />} />
-          <Route path="/signup" element={<SignUp />} />
+          			<Route path="/signup" element={<SignUp />} />
 					<Route path="/profile" element={<Profile />} />
 				</Routes>
 			</Router>
