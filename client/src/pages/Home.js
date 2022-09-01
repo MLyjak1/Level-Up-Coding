@@ -19,6 +19,8 @@ const Home = () => {
     };
 
     return(
+        <div className="box">
+        <div className="panel">
         <section className='homePage'>
         <div className='beginner '>
             <h1 className='beginnerHeader'>Beginner Coding Tutorials</h1>
@@ -62,6 +64,8 @@ const Home = () => {
                 </button>
         </div>
         </section>
+        </div>
+        </div>
     )
 };
 

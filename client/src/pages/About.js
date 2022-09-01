@@ -2,6 +2,7 @@ import React from "react";
 
 const About = () => {
   return (
+    
     <main className="aboutPage">
       <title className="aboutTitle flex justify-center">
         <h1 className="aboutTitle">About</h1>
@@ -18,7 +19,7 @@ const About = () => {
         </p>
       </section>
       <section className="developers ">
-        <table className="">
+        <table className="devbox">
           <tr>
             <th>Team</th>
             <th>Socials</th>
