@@ -2,57 +2,81 @@
     {
         "_id": 1,
         "videoLink": "https://www.youtube.com/watch?v=6vJOOhjt3aw",
-        "title": "",
-        "description": "",
-        "videoAuthor": "What Make Art - https://www.youtube.com/c/WhatMakeArt",
+        "title": "Learn Basic HTML - Hello World",
+        "description": "This video will teach you how to set up and create a basic HTML page that displays 'Hello World' on it.",
+        "videoAuthor": "What Make Art",
+        "authorLink": "https://www.youtube.com/c/WhatMakeArt",
         "courseLevel": "beginner"
     },
     {
         "_id": 2,
         "videoLink": "",
+        "title": "",
         "videoAuthor": "",
+        "authorLink": "",
         "courseLevel": "beginner"
     },
     {
         "_id": 3,
         "videoLink": "",
+        "title": "",
+        "description": "",
         "videoAuthor": "",
+        "authorLink": "",
         "courseLevel": "beginner"
     },
     {
         "_id": 4,
         "videoLink": "",
+        "title": "",
+        "description": "",
         "videoAuthor": "",
+        "authorLink": "",
         "courseLevel": "intermediate"
     },
     {
         "_id": 5,
         "videoLink": "",
+        "title": "",
+        "description": "",
         "videoAuthor": "",
+        "authorLink": "",
         "courseLevel": "intermediate"
     },
     {
         "_id": 6,
         "videoLink": "",
+        "title": "",
+        "description": "",
         "videoAuthor": "",
+        "authorLink": "",
         "courseLevel": "intermediate"
     },
     {
         "_id": 7,
         "videoLink": "",
+        "title": "",
+        "description": "",
         "videoAuthor": "",
+        "authorLink": "",
         "courseLevel": "advanced"
     },
     {
         "_id": 8,
         "videoLink": "",
+        "title": "",
+        "description": "",
         "videoAuthor": "",
+        "authorLink": "",
         "courseLevel": "advanced"
     },
     {
         "_id": 9,
         "videoLink": "",
+        "title": "",
+        "description": "",
         "videoAuthor": "",
+        "authorLink": "",
         "courseLevel": "advanced"
     }
 ]
