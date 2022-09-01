@@ -50,6 +50,10 @@ const typeDefs = gql`
 			commentText: String!
 			username: String!
 		): Video
+		removeComment(
+			videoId: ID!
+			commentId: ID!
+		): Video
 	}
 `;
 

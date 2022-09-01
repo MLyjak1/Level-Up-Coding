@@ -72,15 +72,16 @@ const resolvers = {
                 }
             );
         },
-        // removeComment: async (parent, { videoId, commentId }) => {
-        //     return Video.findOneAndUpdate(
-        //         { _id: videoId },
-        //         {
-        //             $pull: { comments: { _id: commentId } },
-        //         }
+        removeComment: async (parent, { videoId, commentId }) => {
+            return Video.findOneAndUpdate(
+                { _id: videoId },
+                {
+                    $pull: { comments: { _id: commentId } },
+                },
+                { runValidators: true, new: true },
 
-        //     )
-        // }
+            )
+        }
     },
 };
 

@@ -25,13 +25,13 @@ const ViewVideo = () => {
             <embed src={video.videoLink}></embed>
             {/* <div>{video.description}</div> */}
 
-            <div class="max-w-sm w-full lg:max-w-full lg:flex">
-            <div class="border-r border-b border-l border-gray-400 lg:border-l-0 lg:border-t lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
-                <div class="mb-8">
-                <div class="text-gray-900 font-bold text-xl mb-2">{video.title}</div>
-                <p class="text-gray-700 text-base">{video.description}</p>
+            <div className="max-w-sm w-full lg:max-w-full lg:flex">
+            <div className="border-r border-b border-l border-gray-400 lg:border-l-0 lg:border-t lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
+                <div className="mb-8">
+                <div className="text-gray-900 font-bold text-xl mb-2">{video.title}</div>
+                <p className="text-gray-700 text-base">{video.description}</p>
                 </div>
-                <div class="flex items-center">
+                <div className="flex items-center">
                 {/* <div class="text-sm">
                     <p class="text-gray-900 leading-none">{video.authorLink}</p>
                     <p class="text-gray-600">Aug 18</p>

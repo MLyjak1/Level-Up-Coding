@@ -50,3 +50,27 @@ export const ADD_COMMENT = gql`
         }
     }
 `;
+
+export const REMOVE_COMMENT = gql`
+    mutation removeComment(
+        $videoId: ID!
+        $commentId: ID!
+    ) {
+        removeComment(
+            videoId: $videoId
+            commentId: $commentId
+        ) {
+            _id
+            videoLink
+            title
+            description
+            videoAuthor
+            authorLink
+            courseLevel
+            comments {
+                _id
+                commentText
+                createdAt
+            }
+        }
+    }`
