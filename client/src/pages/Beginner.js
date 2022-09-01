@@ -26,7 +26,7 @@ const Beginner = () => {
 							<Link
 								className="btn btn-primary btn-block btn-squared"
 								to={`/videos/${video._id}`}
-								> See More</Link>
+								>See More</Link>
 						</div>
 					))}
 				</div>
