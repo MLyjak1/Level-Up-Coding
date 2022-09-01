@@ -13,6 +13,16 @@ function Navbar () {
 		<div className = "bannerbox">
             <nav className="navbar">
 			<Link to="/" className="home">Home</Link>
+			<div class="dropdown">
+				<button class="dropbtn">Courses
+					<i class="fa fa-caret-down"></i>
+				</button>
+				<div class="dropdown-content">
+					<Link to="/beginner" className="beginner">Beginner</Link>
+					<Link to="/intermediate" className="intermediate">Intermediate</Link>
+					<Link to="/advanced" className="advanced">Advanced</Link>
+				</div>
+			</div>
 			<Link to="/about" className="about">About</Link>
 			{Auth.loggedIn() ? (
 				<>
