@@ -1,6 +1,5 @@
 [
     {
-        "_id": 1,
         "videoLink": "https://www.youtube.com/watch?v=6vJOOhjt3aw",
         "title": "Learn Basic HTML - Hello World",
         "description": "This video will teach you how to set up and create a basic HTML page that displays 'Hello World' on it.",
@@ -9,7 +8,6 @@
         "courseLevel": "beginner"
     },
     {
-        "_id": 2,
         "videoLink": "",
         "title": "",
         "videoAuthor": "",
@@ -17,7 +15,6 @@
         "courseLevel": "beginner"
     },
     {
-        "_id": 3,
         "videoLink": "",
         "title": "",
         "description": "",
@@ -26,7 +23,6 @@
         "courseLevel": "beginner"
     },
     {
-        "_id": 4,
         "videoLink": "",
         "title": "",
         "description": "",
@@ -35,7 +31,6 @@
         "courseLevel": "intermediate"
     },
     {
-        "_id": 5,
         "videoLink": "",
         "title": "",
         "description": "",
@@ -44,7 +39,6 @@
         "courseLevel": "intermediate"
     },
     {
-        "_id": 6,
         "videoLink": "",
         "title": "",
         "description": "",
@@ -53,7 +47,6 @@
         "courseLevel": "intermediate"
     },
     {
-        "_id": 7,
         "videoLink": "",
         "title": "",
         "description": "",
@@ -62,7 +55,6 @@
         "courseLevel": "advanced"
     },
     {
-        "_id": 8,
         "videoLink": "",
         "title": "",
         "description": "",
@@ -71,7 +63,6 @@
         "courseLevel": "advanced"
     },
     {
-        "_id": 9,
         "videoLink": "",
         "title": "",
         "description": "",
