@@ -21,6 +21,8 @@ const Home = () => {
 		navigate("/advanced");
 	};
 	return (
+        <div className="box">
+        <div className="panel">
 		<section className="homePage">
 			<div className="beginner">
 				<h1 className="beginnerHeader">Beginner Coding Tutorials</h1>
@@ -70,8 +72,62 @@ const Home = () => {
 				</button>
 			</div>
 		</section>
+        </div>
+        </div>
 	);
 };
+// =======
+//     return(
+//         <div className="box">
+//         <div className="panel">
+//         <section className='homePage'>
+//         <div className='beginner '>
+//             <h1 className='beginnerHeader'>Beginner Coding Tutorials</h1>
+//                 <embed className="" src={beginner.videoLink}></embed>
+//                 <p className='beginner-text'>
+//                     Placeholder text, will come back and finish later. Will describe the 3 beginner videos.
+//                 </p>
+//                 <button className='beginner-button'
+//                         style={{ cursor: 'pointer' }}
+//                         onClick={goToBeginnerPage}
+//                 >
+//                     Beginner Page
+//                 </button>
+//         </div>
+
+//         <div className='intermediate'>
+//             <h1 className='intermediateHeader'>Intermediate Coding Tutorials</h1>
+//                 <embed src={intermediate.videoLink}></embed>
+//                 <p className='intermediate-text'>
+//                     Placeholder text, will come back and finish later. Will describe the 3 intermediate videos.
+//                 </p>
+//                 <button className='intermediate-button'
+//                         style={{ cursor: 'pointer' }}
+//                         onClick={goToIntermediatePage}
+//                 >
+//                     Intermediate Page 
+//                 </button>
+//         </div>
+
+//         <div className='advanced'>
+//             <h1 className='advancedHeader'>Advanced Coding Tutorials</h1>
+//                 <embed src={advanced.videoLink}></embed>
+//                 <p className='advanced-text'>
+//                     Placeholder text, will come back and finish later. Will describe the 3 advanced videos.
+//                 </p>
+//                 <button className='advanced-button'
+//                         style={{ cursor: 'pointer' }}
+//                         onClick={goToAdvancedPage}
+//                 >
+//                     Advanced Page
+//                 </button>
+//         </div>
+//         </section>
+//         </div>
+//         </div>
+//     )
+// >>>>>>> 763ffbc91f6f457b899e675c9d7bf9b34f65bda2
+// };
 export default Home;
 
 // import React from 'react';
