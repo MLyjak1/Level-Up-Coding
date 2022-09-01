@@ -1,37 +1,23 @@
 import React from 'react';
+import videos from '../utils/videoSeeds.json';
 
 const Beginner = () => {
+        const beginners = videos.filter(obj=> obj.courseLevel == 'beginner');
         return (
                 <div className="box">
                         <div className='panel'>
-                                <body className='beginner-page'>
-                                        <div className='beginner-video-1'>
-                                                <source src='placeholder for video'
-                                                        type='placeholder'>
-                                                </source>
+                                <div className='beginner-page'>
+                                        {
+                                                beginners.map(obj => 
+                                        <div key = {obj._id} className='{obj.title}'>
+                                        <embed src={obj.videoLink}>
+                                        </embed>       
                                                 <p className='beginner-text-1'>
-                                                        Placeholder text, will come back and finish later. Will describe the first beginner video.
+                                                        {obj.description}
                                                 </p>
-                                        </div>
-
-                                        <div className='beginner-video-2'>
-                                                <source src='placeholder for video'
-                                                        type='placeholder'>
-                                                </source>
-                                                <p className='beginner-text-2'>
-                                                        Placeholder text, will come back and finish later. Will describe the second beginner video.
-                                                </p>
-                                        </div>
-
-                                        <div className='beginner-video-3'>
-                                                <source src='placeholder for video'
-                                                        type='placeholder'>
-                                                </source>
-                                                <p className='beginner-text-3'>
-                                                        Placeholder text, will come back and finish later. Will describe the third beginner video.
-                                                </p>
-                                        </div>
-                                </body>
+                                        </div>)
+                                        }
+                                </div>
                         </div>
                 </div>
         )

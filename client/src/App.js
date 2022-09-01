@@ -11,6 +11,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 // Imports pages and components
 import Home from "./pages/Home";
 import Beginner from "./pages/Beginner";
+import Advanced from "./pages/Advanced";
 import Profile from "./pages/Profile";
 import About from "./pages/About";
 import Login from "./pages/Login";
@@ -56,6 +57,7 @@ function App() {
 					<Route path="/about" element={<About />} />
 					<Route path="/beginner" element={<Beginner />} />
 					<Route path="/intermediate" element={<Intermediate />} />
+					<Route path="/advanced" element={<Advanced />} />
 					<Route path="/login" element={<Login />} />
           <Route path="/signup" element={<SignUp />} />
 					<Route path="/profile" element={<Profile />} />
