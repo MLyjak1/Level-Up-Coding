@@ -20,12 +20,12 @@ const userSchema = new Schema(
             minlength: 4,
         },
         //Check again next time
-        comments: [
-            {
-                type: Schema.Types.ObjectId,
-                ref: "Comment",
-            },
-        ],
+        // comments: [
+        //     {
+        //         type: Schema.Types.ObjectId,
+        //         ref: "Comment",
+        //     },
+        // ],
     }, 
     {
         toJSON: {

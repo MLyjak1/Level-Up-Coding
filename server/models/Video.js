@@ -2,11 +2,11 @@ const { Schema, model } = require("mongoose");
 const commentSchema = require("./Comment");
 
 const videoSchema = new Schema({
-	_id: {
-		type: Number,
-		required: true,
-		unique: true,
-	},
+	// _id: {
+	// 	type: Number,
+	// 	required: true,
+	// 	unique: true,
+	// },
 	videoLink: {
 		type: String,
 		// required: 'You need to leave a thought!',
@@ -40,6 +40,12 @@ const videoSchema = new Schema({
 	// 	},
 	// },
 	comments: [commentSchema],
+	// comments: [
+	// 	{
+	// 		type: Schema.Types.ObjectId,
+	// 		ref: "Comment",
+	// 	},
+	// ],
 });
 
 const Video = model("Video", videoSchema);

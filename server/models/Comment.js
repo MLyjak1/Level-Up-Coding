@@ -2,10 +2,10 @@ const { Schema, Types } = require("mongoose");
 
 const commentSchema = new Schema(
     {
-        commentId: {
-            type: Schema.Types.ObjectId,
-            default: () => new Types.ObjectId(),
-        },
+        // commentId: {
+        //     type: Schema.Types.ObjectId,
+        //     default: () => new Types.ObjectId(),
+        // },
         commentText: {
             type: String,
             required: "Cannot leave an empty comment!",

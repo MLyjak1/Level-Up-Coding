@@ -1,6 +1,6 @@
 import React from 'react';
 import videos from '../utils/videoSeeds.json';
-import { Routes, Route, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const Home = () => {
     const navigate = useNavigate();

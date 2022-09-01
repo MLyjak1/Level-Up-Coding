@@ -1,5 +1,5 @@
 const { AuthenticationError } = require("apollo-server-express");
-const { User } = require("../models");
+const { User, Video } = require("../models");
 const { signToken } = require("../utils/auth");
 
 const resolvers = {
@@ -50,6 +50,27 @@ const resolvers = {
             // Return an "Auth" object that consists of the signed token and user's info
             return { token, user };
         },
+        addComment: async (parent, { videoId, commentText, username }) => {
+            return Video.findOneAndUpdate(
+                {_id: videoId },
+                {
+                    $addToSet: { comments: { commentText, username } },
+                },
+                {
+                    new: true,
+                    runValidators: true,
+                }
+            );
+        },
+        // removeComment: async (parent, { videoId, commentId }) => {
+        //     return Video.findOneAndUpdate(
+        //         { _id: videoId },
+        //         {
+        //             $pull: { comments: { _id: commentId } },
+        //         }
+
+        //     )
+        // }
     },
 };
 
