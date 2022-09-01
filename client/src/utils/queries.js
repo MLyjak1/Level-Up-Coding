@@ -22,6 +22,7 @@ export const QUERY_COMMENTS = gql`
             _id
             commentText
             username
+            createdAt
         }
     }
 `;
