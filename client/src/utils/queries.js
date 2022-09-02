@@ -20,8 +20,18 @@ export const QUERY_COMMENTS = gql`
     query getComments {
         comments {
             _id
-            commentText
-            username
+            videoLink
+            title
+            description
+            videoAuthor
+            authorLink
+            courseLevel
+            comments {
+                _id
+                commentText
+                username
+                createdAt
+            }
         }
     }
 `;
@@ -50,6 +60,27 @@ export const QUERY_VIDEOS = gql`
 export const QUERY_SINGLE_VIDEO = gql`
     query getSingleVideo ($videoId: ID!) {
         video(videoId: $videoId) {
+            _id
+            videoLink
+            title
+            description
+            videoAuthor
+            authorLink
+            courseLevel
+            comments {
+                _id
+                commentText
+                username
+                createdAt
+            }
+        }
+    }
+`;
+
+
+export const QUERY_USER_COMMENTS = gql`
+    query getUserComments ($username: String!) {
+        userComments(username: $username) {
             _id
             videoLink
             title
