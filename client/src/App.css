@@ -62,6 +62,7 @@ body {
   font-family: 'Russo One', sans-serif;
   margin-left: .5em;
   margin-right: .5em;
+  text-align: center;
 }
 
 .aboutPage {
@@ -124,6 +125,18 @@ body {
   font-size: 200%;
 }
 
+
+
+.main-vid{
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  color:#9778BF;
+  font-size: 80%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+
 .text-1{
   display:flex;
   flex-wrap: wrap;
@@ -157,7 +170,6 @@ body {
   border-width: .3em;
   margin-left:20%;
   margin-right:20%;
-  margin-bottom: 2em;
 }
 .btn1:hover {
   border-style: outset;
@@ -169,6 +181,28 @@ body {
 
 .video-content1{
   margin-left: 32%;  
+}
+
+.video-content2{
+  margin-left: 31%;
+  margin-right: 31%;
+  margin-top: 2%;  
+}
+
+.comment-box{
+  font-size: x-large;
+  color:lightskyblue;
+  padding-left:5em;
+  padding-right:5em;
+  margin-left: 30%;
+  margin-right: 30%;
+}
+
+.leave-comment{
+  font-size: xx-large;
+  color:#CC917A;
+  margin-left: 5em;
+  margin-right: 5em;
 }
 
 
