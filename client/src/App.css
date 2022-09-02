@@ -62,6 +62,7 @@ body {
   font-family: 'Russo One', sans-serif;
   margin-left: .5em;
   margin-right: .5em;
+  text-align: center;
 }
 
 .aboutPage {
@@ -124,6 +125,17 @@ body {
   font-size: 200%;
 }
 
+
+
+.main-vid{
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  color:#9778BF;
+  text-decoration: underline;
+  font-size: 80%;
+}
+
 .text-1{
   display:flex;
   flex-wrap: wrap;
@@ -162,6 +174,26 @@ body {
   margin-left: 32%;  
 }
 
+.video-content2{
+  margin-left: 31%;
+  margin-right: 31%;  
+}
+
+.comment-box{
+  font-size: x-large;
+  color:lightskyblue;
+  padding-left:5em;
+  padding-right:5em;
+  margin-left: 30%;
+  margin-right: 30%;
+}
+
+.leave-comment{
+  font-size: xx-large;
+  color:#CC917A;
+  margin-left: 5em;
+  margin-right: 5em;
+}
 
 /* Dropdown button */
 .dropdown .dropbtn {
