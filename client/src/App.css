@@ -159,3 +159,8 @@ body {
 .dropdown:hover .dropdown-content {
   display: block;
 }
+
+.viewVideo {
+  font-family: 'Russo One', sans-serif;
+  color: #55C9B0
+}
