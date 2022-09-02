@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useQuery } from "@apollo/client";
 import { QUERY_VIDEOS } from "../utils/queries";
+import Auth from "../utils/auth";
 
 const Advanced = () => {
 	const { loading, data } = useQuery(QUERY_VIDEOS, {
@@ -17,20 +18,30 @@ const Advanced = () => {
 		<div className="box">
 			<div className="panel">
 				<div className="advanced-page">
-				<h1 className="vid-headings"> Advanced Videos</h1>
+					<h1 className="vid-headings"> Advanced Videos</h1>
 					{advanced.map((video) => (
 						<div key={video._id} className="{video.title}">
-							<embed src={video.videoLink} className="video-content1"></embed>
-							<p className="text-1">
-								{video.description}
-							</p>
-
-							<Link
-								className="btn1"
-								to={`/videos/${video._id}`}
-							>
-								View and Comment
-							</Link>
+							<embed
+								src={video.videoLink}
+								className="video-content1"
+							></embed>
+							<p className="text-1">{video.description}</p>
+							{Auth.loggedIn() ? (
+								<>
+									<Link
+										className="btn"
+										to={`/videos/${video._id}`}
+									>
+										View and Comment
+									</Link>
+								</>
+							) : (
+								<>
+									<Link className="btn" to={`/login`}>
+										Login to View and Comment
+									</Link>
+								</>
+							)}
 						</div>
 					))}
 				</div>
