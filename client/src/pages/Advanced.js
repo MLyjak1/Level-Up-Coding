@@ -19,6 +19,7 @@ const Advanced = () => {
 				<div className="advanced-page">
 					{advanced.map((video) => (
 						<div key={video._id} className="{video.title}">
+							<p>{video.title}</p>
 							<embed src={video.videoLink}></embed>
 							<p className="advanced-text-1">
 								{video.description}

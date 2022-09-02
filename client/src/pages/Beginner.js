@@ -19,6 +19,7 @@ const Beginner = () => {
 				<div className="beginner-page">
 					{beginners.map((video) => (
 						<div key={video._id} className="{video.title}">
+							<p>{video.title}</p>
 							<embed src={video.videoLink}></embed>
 							<p className="beginner-text-1">
 								{video.description}
