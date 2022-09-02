@@ -11,7 +11,7 @@ export default function NavBar() {
 	};
 	return (
 		<nav className="bannerbox w-full">
-			<div className="navbar justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
+			<div className="navbar justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex flex-wrap md:px-8">
 				<div>
 					<div className="flex items-center justify-between">
 						<a href="/">
@@ -57,7 +57,7 @@ export default function NavBar() {
 				</div>
 				<div>
 					<div
-						className={`flex flex-wrap justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 ${navbar ? "block" : "hidden"}`}
+						className={`flex justify-self-center pb-3 mt-4 md:block md:pb-0 md:mt-0 ${navbar ? "block" : "hidden"}`}
 					>
 						<ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
 							<li className="home text-2xl">
@@ -87,7 +87,7 @@ export default function NavBar() {
 								) : (
 									<>
 										<Link to="/login" className="profile">Login</Link>
-										<Link to="/signup" className="profile">Sign Up</Link>
+										<Link to="/signup" className="profile">SignUp</Link>
 									</>
 								)}
 							</li>
