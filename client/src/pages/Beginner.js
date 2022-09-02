@@ -38,7 +38,7 @@ const Beginner = () => {
 							) : (
 								<>
 									<Link className="btn" to={`/login`}>
-										Login to View and Comment
+										Login to Comment
 									</Link>
 								</>
 							)}
