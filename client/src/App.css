@@ -37,6 +37,10 @@ body {
   color: #9778BF;
 }
 
+.home-button {
+  color: #9778BF
+}
+
 .about{
   color: #CC917A;
 }
@@ -63,7 +67,8 @@ body {
   font-size: xx-large;
   border-radius: 50px;
   font-family: 'Russo One', sans-serif;
-  
+  margin-left: .5em;
+  margin-right: .5em;
 }
 
 
