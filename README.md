@@ -41,13 +41,13 @@ Add Screenshot
 Add Gif?
 Add Video?
 
-Add Powerpoint
+[Powerpoint](https://docs.google.com/presentation/d/13TS3gn0KVJ3qUaZyc8E7dSBY8CL6jQlzJngSYZSYE8Q/edit#slide=id.g29f43f0a72_0_24)
 
 ## Repository/Deployment:
 
 https://github.com/MLyjak1/Level-Up-Coding
 
-Add Deployed Website
+[Deployed Website](https://level-up-coding.herokuapp.com/)
 
 ## Instructions for Future Developers:
 
