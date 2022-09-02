@@ -14,22 +14,23 @@ const Intermediate = () => {
 		return <div>Loading...</div>;
 	}
 	return (
-		<div className="box h-screen">
+		<div className="box">
 			<div className="panel">
 				<div className="intermediate-page">
+				<h1 className="vid-headings"> Intermediate Videos</h1>
 					{intermediate.map((video) => (
 						<div key={video._id} className="{video.title}">
-							<embed src={video.videoLink}></embed>
-							<p className="intermediate-text-1">
+							<embed src={video.videoLink} className="video-content"></embed>
+							<p className="text-1">
 								{video.description}
 							</p>
 
 							<Link
-								className="btn btn-primary btn-block btn-squared"
+								className="btn"
 								to={`/videos/${video._id}`}
 							>
 								{" "}
-								See More
+								View and Comment
 							</Link>
 						</div>
 					))}
