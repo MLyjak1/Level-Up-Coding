@@ -132,8 +132,9 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   color:#9778BF;
-  text-decoration: underline;
   font-size: 80%;
+  padding-top: 2%;
+  padding-bottom: 2%;
 }
 
 .text-1{
@@ -169,7 +170,6 @@ body {
   border-width: .3em;
   margin-left:20%;
   margin-right:20%;
-  margin-bottom: 2em;
 }
 .btn1:hover {
   border-style: outset;
@@ -185,7 +185,8 @@ body {
 
 .video-content2{
   margin-left: 31%;
-  margin-right: 31%;  
+  margin-right: 31%;
+  margin-top: 2%;  
 }
 
 .comment-box{
@@ -203,6 +204,7 @@ body {
   margin-left: 5em;
   margin-right: 5em;
 }
+
 
 /* Dropdown button */
 .dropdown .dropbtn {
