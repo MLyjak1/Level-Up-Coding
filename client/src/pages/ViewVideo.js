@@ -20,7 +20,7 @@ const ViewVideo = () => {
 	return (
 		<main className="viewVideo">
 			<div className="flex justify-center">
-				<embed className="" src={video.videoLink}></embed>
+				<embed width="620" height="415" className="" src={video.videoLink}></embed>
 			</div>
 			<div className="max-w-sm w-full lg:max-w-full lg:flex">
 				<div className="border-r border-b border-l border-gray-400 lg:border-l-0 lg:border-t lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">

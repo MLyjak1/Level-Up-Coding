@@ -140,6 +140,11 @@ body {
   border-width: .3em;
   margin-left:35%;
   margin-right:35%;
+  margin-bottom: 2em;
+}
+
+.btn:hover {
+  border-style: outset;
 }
 
 .btn1{
@@ -152,6 +157,10 @@ body {
   border-width: .3em;
   margin-left:20%;
   margin-right:20%;
+  margin-bottom: 2em;
+}
+.btn1:hover {
+  border-style: outset;
 }
 
 .video-content{
@@ -208,9 +217,4 @@ body {
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
   display: block;
-}
-
-.viewVideo {
-  font-family: 'Russo One', sans-serif;
-  color: #55C9B0
 }
