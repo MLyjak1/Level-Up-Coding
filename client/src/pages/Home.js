@@ -21,7 +21,7 @@ const Home = () => {
 		navigate("/advanced");
 	};
 	return (
-        <div className="bannerbox">
+        <div className="box h-screen">
         <div className="panel">
 		<section className="homePage">
 			<h2 className="beginnerHeader px-4 mb-2">Beginner Coding Tutorials</h2>

@@ -14,7 +14,7 @@ const Intermediate = () => {
 		return <div>Loading...</div>;
 	}
 	return (
-		<div className="box">
+		<div className="box h-screen">
 			<div className="panel">
 				<div className="intermediate-page">
 					{intermediate.map((video) => (
