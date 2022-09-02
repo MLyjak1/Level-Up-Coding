@@ -8,7 +8,7 @@ nav a {
 }
 
 body {
-  background-image: url("./assets/images/binary.jpg");
+  background-color: #3C3C3C;
   color: white;  
 }
 .bannerbox{
@@ -46,6 +46,7 @@ body {
 
 .box{
   background-color: #3C3C3C;
+  height:100%;
 }
 
 .panel{
