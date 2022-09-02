@@ -64,7 +64,6 @@ body {
   margin-right: .5em;
 }
 
-
 .aboutPage {
   color: #CC917A;
   background-color: #1E1E1E;
@@ -115,6 +114,7 @@ body {
   float: left;
   /* overflow: hidden; */
 }
+
 .vid-headings{
   display:flex;
   flex-wrap: wrap;
@@ -123,11 +123,13 @@ body {
   text-decoration: underline;
   font-size: 200%;
 }
+
 .text-1{
   display:flex;
   flex-wrap: wrap;
   justify-content: center;
 }
+
 .btn{
   display:flex;
   flex-wrap: wrap;
@@ -139,6 +141,7 @@ body {
   margin-left:35%;
   margin-right:35%;
 }
+
 .btn1{
   display:flex;
   flex-wrap: wrap;
@@ -150,16 +153,13 @@ body {
   margin-left:20%;
   margin-right:20%;
 }
+
 .video-content{
   margin-left: 40%;  
 }
 
 .video-content1{
   margin-left: 32%;  
-}
-
-.ytp-cued-thumbnail-overlay-image{
-  width:30%;
 }
 
 

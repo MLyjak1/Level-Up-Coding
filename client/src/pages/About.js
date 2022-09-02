@@ -2,13 +2,13 @@ import React from "react";
 
 const About = () => {
   return (
-    
+    <div className="box">
     <main className="aboutPage">
       <title className="aboutTitle flex justify-center">
         <h1 className="aboutTitle">About</h1>
       </title>
-
       <section className="aboutContent">
+        
         <p className="contentDescr">
           Thanks for visiting our website! <br />
           Our goal at Level Up coding is to help people learn how to code at any
@@ -59,6 +59,7 @@ const About = () => {
         </table>
       </section>
     </main>
+    </div>
   );
 };
 
