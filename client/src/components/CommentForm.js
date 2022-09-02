@@ -2,18 +2,35 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useMutation } from '@apollo/client';
 import { ADD_COMMENT } from "../utils/mutations";
+import { QUERY_COMMENTS } from "../utils/queries";
 import Auth from "../utils/auth";
 
 const CommentForm = ({ videoId }) => {
     const [commentText, setCommentText] = useState("");
     const [characterCount, setCharacterCount] = useState(0);
 
-    const [addComment, { error }] = useMutation(ADD_COMMENT);
+    const [addComment, { error }] = useMutation(ADD_COMMENT, {
+        update(cache, { data: { addComment } }) {
+            try {
+                const { comments } = cache.readQuery({ query: QUERY_COMMENTS });
+
+                cache.writeQuery({
+                    query: QUERY_COMMENTS,
+                    data: { comments: [addComment, ...comments] },
+                });
+            } catch (err) {
+                console.error(err);
+            }
+        }
+    });
 
     const handleFormSubmit = async (event) => {
         event.preventDefault();
+        console.log(event);
 
         try {
+
+            console.log(videoId, commentText, Auth.getProfile().data.username);
             const { data } = await addComment({
                 variables: {
                     videoId,
@@ -21,8 +38,11 @@ const CommentForm = ({ videoId }) => {
                     username: Auth.getProfile().data.username,
                 }
             });
+            window.location.reload();
+            console.log(data);
         } catch (err) {
             console.error(err);
+            console.log(err);
         }
     };
 
@@ -62,17 +82,19 @@ const CommentForm = ({ videoId }) => {
                         </div>
 
                         <div className="col-12 col-lg-3">
-                        <button className="btn btn-primary btn-block py-3" type="submit">
-                            Add Comment
+                        <button className="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow py-3" type="submit">
+                            Submit Comment
                         </button>
                     </div>
                     </form>
                     
                 </>
             ) : (
-                <p>
-                    Dear friend, please <Link>log in</Link> or <Link to="/signup">sign up</Link> to make comments on this video!
-                </p>
+                <>
+                    <p>
+                        Dear friend, please <Link>log in</Link> or <Link to="/signup">sign up</Link> to make comments on this video!
+                    </p>
+                </>
             )}
         </div>
     );

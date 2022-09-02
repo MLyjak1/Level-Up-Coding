@@ -19,6 +19,7 @@ const Intermediate = () => {
 				<div className="intermediate-page">
 					{intermediate.map((video) => (
 						<div key={video._id} className="{video.title}">
+							<p>{video.title}</p>
 							<embed src={video.videoLink}></embed>
 							<p className="intermediate-text-1">
 								{video.description}

@@ -16,7 +16,7 @@ const commentSchema = new Schema(
         // Need to double check...
         username: {
             type: String,
-            required: true,
+            required: false,
         },
         createdAt: {
             type: Date,
