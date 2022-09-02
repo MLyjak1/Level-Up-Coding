@@ -15,20 +15,12 @@ body {
   background-color: #3C3C3C;
   padding-bottom:2em;
   padding-top: 1em;
-  /* display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center; */
+  height: 100%;
 }
 
 .navbar{
   background-color: #1E1E1E;
   color: lightskyblue;
-  /* padding-bottom: .5em;
-  padding-top: .5em; */
-  /* display:flex;
-  justify-content: center; */
-  font-size: x-large;
   border-radius: 50px;
   font-family: 'Russo One', sans-serif;
 }

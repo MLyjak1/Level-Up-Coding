@@ -21,10 +21,10 @@ const Home = () => {
 		navigate("/advanced");
 	};
 	return (
-        <div className="box">
+        <div className="bannerbox">
         <div className="panel">
 		<section className="homePage">
-			<h1 className="beginnerHeader px-4 mb-2">Beginner Coding Tutorials</h1>
+			<h2 className="beginnerHeader px-4 mb-2">Beginner Coding Tutorials</h2>
 			<div className="beginner md:flex justify-end justify-between px-4">
 				<embed src={beginner.videoLink}></embed>
 				<div className="beginnerInfo text-lg">
@@ -40,12 +40,12 @@ const Home = () => {
 					</button>
 				</div>
 			</div>
-			<h1 className="intermediateHeader px-4 mt-6 mb-2">Intermediate Coding Tutorials</h1>
+			<h2 className="intermediateHeader px-4 mt-6 mb-2">Intermediate Coding Tutorials</h2>
 			<div className="intermediate md:flex justify-end justify-between px-4">
 				<embed src={intermediate.videoLink}></embed>
 				<div className="intermediateInfo text-lg">
 					<p className="intermediate-text px-2">
-						These videos are geared towards coders who are ready to get into the meat of coding with languages like JavaScript.
+						These videos are geared towards coders who want to advance their skills with languages like JavaScript.
 					</p>
 					<button
 						className="home-button px-2"
@@ -56,7 +56,7 @@ const Home = () => {
 					</button>
 				</div>
 			</div>
-			<h1 className="advancedHeader px-4 mt-6 mb-2">Advanced Coding Tutorials</h1>
+			<h2 className="advancedHeader px-4 mt-6 mb-2">Advanced Coding Tutorials</h2>
 			<div className="advanced md:flex justify-end justify-between px-4">
 				<embed src={advanced.videoLink}></embed>
 			<div className="advancedInfo text-lg">	
