@@ -17,25 +17,24 @@ const Beginner = () => {
 		<div className="box">
 			<div className="panel">
 				<div className="beginner-page">
+				<h1 className="vid-headings"> Beginner Videos</h1>
 					{beginners.map((video) => (
 						<div key={video._id} className="{video.title}">
-							<p>{video.title}</p>
-							<embed src={video.videoLink}></embed>
-							<p className="beginner-text-1">
+							<embed src={video.videoLink}  className="video-content"></embed>
+							<p className="text-1">
 								{video.description}
 							</p>
 
 							<Link
-								className="btn btn-primary btn-block btn-squared"
+								className="btn"
 								to={`/videos/${video._id}`}
 							>
-								See More
+								View and Comment
 							</Link>
 						</div>
 					))}
 				</div>
 			</div>
-			{/* <div>test</div> */}
 		</div>
 	);
 };

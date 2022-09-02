@@ -6,9 +6,7 @@ const Home = () => {
 	const navigate = useNavigate();
 
 	let beginner = videos.filter((obj) => obj.courseLevel == "beginner")[0];
-	let intermediate = videos.filter(
-		(obj) => obj.courseLevel == "intermediate"
-	)[0];
+	let intermediate = videos.filter((obj) => obj.courseLevel == "intermediate")[0];
 	let advanced = videos.filter((obj) => obj.courseLevel == "advanced")[0];
 
 	const goToBeginnerPage = (event) => {
@@ -40,6 +38,7 @@ const Home = () => {
 					</button>
 				</div>
 			</div>
+			
 			<h2 className="intermediateHeader px-4 mt-6 mb-2">Intermediate Coding Tutorials</h2>
 			<div className="intermediate md:flex justify-end justify-between px-4">
 				<embed src={intermediate.videoLink}></embed>
