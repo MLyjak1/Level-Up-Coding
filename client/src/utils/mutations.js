@@ -25,13 +25,81 @@ export const ADD_USER = gql`
 `
 
 export const ADD_COMMENT = gql`
-    mutation addComment($commentText: String!, $username: String!) {
-        addComment(commentText: $commentText, username: $username) {
+    mutation addComment(
+        $videoId: ID!
+        $commentText: String!
+        $username: String!
+    ) {
+        addComment(
+            videoId: $videoId
+            commentText: $commentText
+            username: $username
+        ) {
             _id
-            commentText
-            username
-            createdAt
-            
+            videoLink
+            title
+            description
+            videoAuthor
+            authorLink
+            courseLevel
+            comments {
+                _id
+                username
+                commentText
+                createdAt
+            }
         }
     }
 `;
+
+export const UPDATE_COMMENT = gql`
+    mutation updateComment(
+        $videoId: ID!
+        $commentId: ID!
+        $commentText: String!
+    ) {
+        updateComment(
+            videoId: $videoId
+            commentId: $commentId
+            commentText: $commentText
+        ) {
+            _id
+            videoLink
+            title
+            description
+            videoAuthor
+            authorLink
+            courseLevel
+            comments {
+                _id
+                commentText
+                username
+                createdAt
+            }
+        }
+    }`
+
+
+export const REMOVE_COMMENT = gql`
+    mutation removeComment(
+        $videoId: ID!
+        $commentId: ID!
+    ) {
+        removeComment(
+            videoId: $videoId
+            commentId: $commentId
+        ) {
+            _id
+            videoLink
+            title
+            description
+            videoAuthor
+            authorLink
+            courseLevel
+            comments {
+                _id
+                commentText
+                createdAt
+            }
+        }
+    }`

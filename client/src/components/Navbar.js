@@ -1,12 +1,14 @@
 import React from 'react';
 import { useState } from "react";
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Auth from "../utils/auth";
 
 export default function NavBar() {
 	const [navbar, setNavbar] = useState(false);
+	const navigate = useNavigate();
 	const logout = (event) => {
 		event.preventDefault();
+		navigate("/");
 		Auth.logout();
 	};
 	return (

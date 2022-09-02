@@ -10,6 +10,10 @@ const app = express();
 const server = new ApolloServer({
   typeDefs,
   resolvers,
+  formatError: (err) => {
+    console.error(err);
+    return err;
+  },
 });
 
 app.use(express.urlencoded({ extended: false }));
