@@ -10,12 +10,12 @@ export default function NavBar() {
 		Auth.logout();
 	};
 	return (
-		<nav className="bannerbox w-full bg-white shadow">
+		<nav className="bannerbox w-full">
 			<div className="navbar justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
 				<div>
-					<div className="flex items-center justify-between py-3 md:py-5 md:block">
-						<a href="javascript:void(0)">
-							<h2 className="text-2xl">Level Up Coding</h2>
+					<div className="flex items-center justify-between">
+						<a href="/">
+							<h1 className="text-5xl">Level Up Coding</h1>
 						</a>
 						<div className="md:hidden">
 							<button
@@ -57,14 +57,13 @@ export default function NavBar() {
 				</div>
 				<div>
 					<div
-						className={`flex-1 justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 ${navbar ? "block" : "hidden"
-							}`}
+						className={`flex flex-wrap justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 ${navbar ? "block" : "hidden"}`}
 					>
 						<ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
-							<li className="home ">
+							<li className="home text-2xl">
 								<a href="/">Home</a>
 							</li>
-							<li className="">
+							<li className="text-2xl">
 								<div className="dropdown">
 									<button className="dropbtn courses">Courses
 										<i className="fa fa-caret-down"></i>
@@ -76,10 +75,10 @@ export default function NavBar() {
 									</div>
 								</div>
 							</li>
-							<li className="about">
+							<li className="about text-2xl">
 								<a href="/about">About</a>
 							</li>
-							<li className="">
+							<li className="text-2xl">
 								{Auth.loggedIn() ? (
 									<>
 										<Link to="/profile" className="profile">Profile</Link>

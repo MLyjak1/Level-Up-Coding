@@ -21,55 +21,56 @@ const Home = () => {
 		navigate("/advanced");
 	};
 	return (
-        <div className="box">
+        <div className="box h-screen">
         <div className="panel">
 		<section className="homePage">
-			<div className="beginner">
-				<h1 className="beginnerHeader">Beginner Coding Tutorials</h1>
+			<h2 className="beginnerHeader px-4 mb-2">Beginner Coding Tutorials</h2>
+			<div className="beginner md:flex justify-end justify-between px-4">
 				<embed src={beginner.videoLink}></embed>
-				<p className="beginner-text">
-					Placeholder text, will come back and finish later. Will
-					describe the 3 beginner videos.
-				</p>
-				<button
-					className="beginner-button"
-					style={{ cursor: "pointer" }}
-					onClick={goToBeginnerPage}
-				>
-					Beginner Page
-				</button>
+				<div className="beginnerInfo text-lg">
+					<p className="beginner-text px-2">
+						These videos are best for people just starting out coding. It covers topics such as basic HTML and CSS.
+					</p>
+					<button
+						className="home-button px-2"
+						style={{ cursor: "pointer" }}
+						onClick={goToBeginnerPage}
+					>
+						Click here to go to Beginner Courses
+					</button>
+				</div>
 			</div>
-			<div className="intermediate">
-				<h1 className="intermediateHeader">
-					Intermediate Coding Tutorials
-				</h1>
+			<h2 className="intermediateHeader px-4 mt-6 mb-2">Intermediate Coding Tutorials</h2>
+			<div className="intermediate md:flex justify-end justify-between px-4">
 				<embed src={intermediate.videoLink}></embed>
-				<p className="intermediate-text">
-					Placeholder text, will come back and finish later. Will
-					describe the 3 intermediate videos.
-				</p>
-				<button
-					className="intermediate-button"
-					style={{ cursor: "pointer" }}
-					onClick={goToIntermediatePage}
-				>
-					Intermediate Page
-				</button>
+				<div className="intermediateInfo text-lg">
+					<p className="intermediate-text px-2">
+						These videos are geared towards coders who want to advance their skills with languages like JavaScript.
+					</p>
+					<button
+						className="home-button px-2"
+						style={{ cursor: "pointer" }}
+						onClick={goToIntermediatePage}
+					>
+						Click here to go to Intermediate Courses
+					</button>
+				</div>
 			</div>
-			<div className="advanced">
-				<h1 className="advancedHeader">Advanced Coding Tutorials</h1>
+			<h2 className="advancedHeader px-4 mt-6 mb-2">Advanced Coding Tutorials</h2>
+			<div className="advanced md:flex justify-end justify-between px-4">
 				<embed src={advanced.videoLink}></embed>
-				<p className="advanced-text">
-					Placeholder text, will come back and finish later. Will
-					describe the 3 advanced videos.
+			<div className="advancedInfo text-lg">	
+				<p className="advanced-text px-2">
+					These courses are designed to deeply immerse budding developers into JavaScript and JQuery.
 				</p>
 				<button
-					className="advanced-button"
+					className="home-button px-2"
 					style={{ cursor: "pointer" }}
 					onClick={goToAdvancedPage}
 				>
-					Advanced Page
+					Click here to go to Advanced Courses
 				</button>
+			</div>
 			</div>
 		</section>
         </div>
