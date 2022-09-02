@@ -18,16 +18,17 @@ const ViewVideo = () => {
 		return <div>Loading...</div>;
 	}
 	return (
-		<div className="box">
-			<div className="panel main-vid">
-			<embed src={video.videoLink} vid-headings></embed>
+		<main className="viewVideo">
+			<div className="flex justify-center">
+				<embed width="620" height="415" className="" src={video.videoLink}></embed>
+			</div>
 			<div className="max-w-sm w-full lg:max-w-full lg:flex">
 				<div className="video-content2 border-r border-b border-l border-gray-400 lg:border-l-0 lg:border-t lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
 					<div className="mb-8">
-						<div className="text-gray-900 font-bold text-xl mb-2">
+						<div className="font-bold text-xl mb-2">
 							{video.title}
 						</div>
-						<p className="text-gray-700 text-base">
+						<p className="text-base">
 							{video.description}
 						</p>
 					</div>
@@ -41,8 +42,7 @@ const ViewVideo = () => {
 			<div className="m-3 p-4 leave-comment" style={{ border: "1px dotted #1a1a1a" }}>
 				<CommentForm videoId={video._id} />
 			</div>
-		</div>
-		</div>
+		</main>
 	);
 };
 
