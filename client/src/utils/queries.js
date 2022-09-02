@@ -20,9 +20,18 @@ export const QUERY_COMMENTS = gql`
     query getComments {
         comments {
             _id
-            commentText
-            username
-            createdAt
+            videoLink
+            title
+            description
+            videoAuthor
+            authorLink
+            courseLevel
+            comments {
+                _id
+                commentText
+                username
+                createdAt
+            }
         }
     }
 `;

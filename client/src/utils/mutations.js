@@ -44,12 +44,41 @@ export const ADD_COMMENT = gql`
             courseLevel
             comments {
                 _id
+                username
                 commentText
                 createdAt
             }
         }
     }
 `;
+
+export const UPDATE_COMMENT = gql`
+    mutation updateComment(
+        $videoId: ID!
+        $commentId: ID!
+        $commentText: String!
+    ) {
+        updateComment(
+            videoId: $videoId
+            commentId: $commentId
+            commentText: $commentText
+        ) {
+            _id
+            videoLink
+            title
+            description
+            videoAuthor
+            authorLink
+            courseLevel
+            comments {
+                _id
+                commentText
+                username
+                createdAt
+            }
+        }
+    }`
+
 
 export const REMOVE_COMMENT = gql`
     mutation removeComment(

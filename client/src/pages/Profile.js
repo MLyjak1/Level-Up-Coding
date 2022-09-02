@@ -4,8 +4,8 @@ import { useQuery } from "@apollo/client";
 import { useMutation } from "@apollo/client";
 import { QUERY_COMMENTS, QUERY_USER_COMMENTS } from "../utils/queries";
 import { REMOVE_COMMENT } from "../utils/mutations";
-import editIcon from "../assets/images/pencil-svgrepo-com.svg";
 import Auth from "../utils/auth";
+import EditCommentModal from "../components/EditCommentModal";
 
 const Profile = () => {
 	const [removeComment, { error }] = useMutation(REMOVE_COMMENT, {
@@ -23,7 +23,6 @@ const Profile = () => {
 
 	const handleDeleteComment = async (videoId, commentId) => {
 		try {
-			console.log("delete:");
 			const { data } = await removeComment({
 				variables: { videoId, commentId },
 			});
@@ -39,8 +38,6 @@ const Profile = () => {
 
 	// Taking data from video schema
 	const videos = data?.userComments || {};
-
-	console.log(videos);
 	if (loading) {
 		return <div>Loading...</div>;
 	}
@@ -57,15 +54,15 @@ const Profile = () => {
 									<div>{video.title}</div>
 									<br />
 									<div>{comment.commentText}</div>
-									{/* <img src={editIcon} alt="pencil edit icon" />
-									 */}
-									<button>Edit</button>
+									<EditCommentModal videoId={video._id} commentId={comment._id} defaultCommentText={comment.commentText} />
 									<br />
 									<button
-										onClick={() => handleDeleteComment(
-											video._id,
-											comment._id
-										)}
+										onClick={() =>
+											handleDeleteComment(
+												video._id,
+												comment._id
+											)
+										}
 									>
 										Delete
 									</button>
@@ -75,7 +72,6 @@ const Profile = () => {
 					))}
 				</div>
 			</div>
-			{/* <div>test</div> */}
 		</div>
 	);
 };

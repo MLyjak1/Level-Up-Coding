@@ -5,7 +5,6 @@ const { signToken } = require("../utils/auth");
 const resolvers = {
     Query: {
         users: async () => {
-            // Add in comments model
             return User.find().populate('comments');
         },
         user: async (parent, { username }) => {
@@ -19,8 +18,10 @@ const resolvers = {
         },
         userComments: async (parent, { username }) => {
             return Video.find({ comment: { username: username }});
-        }
-
+        },
+        comments: async () => {
+            return Video.find({});
+        },
     },
 
     Mutation: {
@@ -70,6 +71,16 @@ const resolvers = {
                     new: true,
                     runValidators: true,
                 }
+            );
+        },
+        updateComment: async (parent, { videoId, commentId, commentText }) => {
+            return Video.findOneAndUpdate(
+                {  _id: videoId , comments: { _id: commentId } },
+                {
+                    $set: { commentText: commentText },
+                },
+                { new: true },
+
             );
         },
         removeComment: async (parent, { videoId, commentId }) => {

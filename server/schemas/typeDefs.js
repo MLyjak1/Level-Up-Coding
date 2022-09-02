@@ -40,6 +40,7 @@ const typeDefs = gql`
 		videos(courseLevel: String!): [Video]
 		video(videoId: ID!): Video
 		userComments(username: String!): [Video]
+		comments: [Video]
 	}
 
 	type Mutation {
@@ -49,6 +50,11 @@ const typeDefs = gql`
 			videoId: ID!
 			commentText: String!
 			username: String!
+		): Video
+		updateComment(
+			videoId: ID!
+			commentId: ID!
+			commentText: String!
 		): Video
 		removeComment(
 			videoId: ID!
