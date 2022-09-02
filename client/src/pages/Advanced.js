@@ -14,23 +14,22 @@ const Advanced = () => {
 		return <div>Loading...</div>;
 	}
 	return (
-		<div className="box h-screen">
+		<div className="box">
 			<div className="panel">
 				<div className="advanced-page">
+				<h1 className="vid-headings"> Advanced Videos</h1>
 					{advanced.map((video) => (
 						<div key={video._id} className="{video.title}">
-							<p>{video.title}</p>
-							<embed src={video.videoLink}></embed>
-							<p className="advanced-text-1">
+							<embed src={video.videoLink} className="video-content1"></embed>
+							<p className="text-1">
 								{video.description}
 							</p>
 
 							<Link
-								className="btn btn-primary btn-block btn-squared"
+								className="btn1"
 								to={`/videos/${video._id}`}
 							>
-								{" "}
-								See More
+								View and Comment
 							</Link>
 						</div>
 					))}

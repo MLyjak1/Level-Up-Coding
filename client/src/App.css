@@ -46,6 +46,8 @@ body {
 
 .box{
   background-color: #3C3C3C;
+  height: 100vh;
+  /* padding-bottom: 2em; */
 }
 
 .panel{
@@ -61,7 +63,6 @@ body {
   margin-left: .5em;
   margin-right: .5em;
 }
-
 
 .aboutPage {
   color: #CC917A;
@@ -91,10 +92,12 @@ body {
   border-radius: 50px;
 }
 
-.contentDescr {
+
+
+/* .contentDescr {
   justify-content: center;
   font-size: large;
-}
+} */
 
 /* .devbox{
   display:flex;
@@ -111,6 +114,54 @@ body {
   float: left;
   /* overflow: hidden; */
 }
+
+.vid-headings{
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  color:#9778BF;
+  text-decoration: underline;
+  font-size: 200%;
+}
+
+.text-1{
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.btn{
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  color:#CC917A;
+  border:#3C3C3C;
+  border-style: inset;
+  border-width: .3em;
+  margin-left:35%;
+  margin-right:35%;
+}
+
+.btn1{
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  color:#CC917A;
+  border:#3C3C3C;
+  border-style: inset;
+  border-width: .3em;
+  margin-left:20%;
+  margin-right:20%;
+}
+
+.video-content{
+  margin-left: 40%;  
+}
+
+.video-content1{
+  margin-left: 32%;  
+}
+
 
 /* Dropdown button */
 .dropdown .dropbtn {
