@@ -78,7 +78,7 @@ export default function NavBar() {
 								</div>
 							</li>
 							<li className="about text-2xl">
-								<a href="/about">About</a>
+								<Link to="/about">About</Link>
 							</li>
 							<li className="text-2xl">
 								{Auth.loggedIn() ? (
